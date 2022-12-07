@@ -1,0 +1,129 @@
+import React from 'react'
+
+export const Portafolio = () => {
+
+    let tabs = [
+        { name: 'Todos' },
+        { name: 'Web' },
+
+    ]
+
+    const [openTab, setOpenTab] = React.useState(1);
+    return (
+        <>
+            <div className="flex flex-wrap lg:py-24 px-6 justify-center space-y-6">
+                <div className='w-full lg:w-1/3  h-24 flex flex-col items-center justify-center rounded-lg'>
+                    <p className="text-xl text-white font-semibold">Portafolio</p>
+                    <p className="text-3xl text-white font-bold">Ultimos Proyectos</p>
+                </div>
+                <div className="w-full flex flex-col justify-center items-center">
+                    <ul className="flex mb-0 list-none flex-wrap pt-3 pb-4 w-full md:w-1/3 justify-center" role="tablist">
+                        {tabs.map((tab, index) => (
+                            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+                                <a
+                                    className={
+                                        "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                                        (openTab === index + 1
+                                            ? "text-white bg-gray-800"
+                                            : "text-" + 'red' + "-600 bg-white")
+                                    }
+                                    onClick={e => {
+                                        e.preventDefault();
+                                        setOpenTab(index + 1);
+                                    }}
+                                    data-toggle="tab"
+                                    href="#link1"
+                                    role="tablist"
+                                >
+                                    {tab.name}
+                                </a>
+                            </li>
+                        ))}
+
+                    </ul>
+                    <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded ">
+                        <div className="px-4 py-5 flex-auto ">
+                            <div className={openTab === 1 ? "flex justify-center items-center" : "hidden"}>
+                                <div className="flex flex-wrap w-full items-center justify-center ">
+                                    <div className="flex flex-col justify-center w-[400px] bg-[#000a12] m-6">
+                                        <div className="p-6">
+                                            <div className='flex justify-between'>
+                                                <div className="flex flex-start">
+                                                    <span className="text-3xl text-white font-semibold">PlatziTravel</span>
+                                                </div>
+                                                <div className="flex space-x-4">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                        className="fill-current text-white hover:text-[#4f5b62] cursor-pointer"
+                                                        width="50" height="50"
+                                                        viewBox="0 0 50 50">
+                                                        <path d="M 25 2 C 12.316406 2 2 12.316406 2 25 C 2 37.683594 12.316406 48 25 48 C 37.683594 48 48 37.683594 48 25 C 48 12.316406 37.683594 2 25 2 Z M 25 12 C 33.859375 12 41.496094 17.324219 45 25 C 41.496094 32.675781 33.859375 38 25 38 C 16.140625 38 8.503906 32.675781 5 25 C 8.503906 17.324219 16.140625 12 25 12 Z M 25 14 C 18.933594 14 14 18.933594 14 25 C 14 31.066406 18.933594 36 25 36 C 31.066406 36 36 31.066406 36 25 C 36 18.933594 31.066406 14 25 14 Z"></path>
+                                                    </svg>
+
+                                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                        className="fill-current text-white hover:text-[#4f5b62] cursor-pointer"
+                                                        width="50" height="50"
+                                                        viewBox="0 0 50 50">
+                                                        <path d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div className="p-6 ">
+                                            <div className="flex justify-center items-center duration-500 w-full h-72 rounded-lg relative hover:scale-90 cursor-pointer">
+                                                <img className="rounded-lg h-full w-full image-cover" src="/src/assets/img/Proyectos/PlatziTravel.png" />
+                                            </div>
+                                            <div className="flex flex-wrap pt-4 space-x-2">
+                                                <span className="p-4 font-semibold text-white">HTML</span>
+                                                <span className="p-4 font-semibold text-white">Tailwind</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex flex-col justify-center w-[400px] bg-[#000a12] m-6">
+                                        <div className="p-6">
+                                            <div className='flex justify-between'>
+                                                <div className="flex flex-start">
+                                                    <span className="text-3xl text-white font-semibold">PlatziTravel</span>
+                                                </div>
+                                                <div className="flex space-x-4">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                        className="fill-current text-white hover:text-[#4f5b62] cursor-pointer"
+                                                        width="50" height="50"
+                                                        viewBox="0 0 50 50">
+                                                        <path d="M 25 2 C 12.316406 2 2 12.316406 2 25 C 2 37.683594 12.316406 48 25 48 C 37.683594 48 48 37.683594 48 25 C 48 12.316406 37.683594 2 25 2 Z M 25 12 C 33.859375 12 41.496094 17.324219 45 25 C 41.496094 32.675781 33.859375 38 25 38 C 16.140625 38 8.503906 32.675781 5 25 C 8.503906 17.324219 16.140625 12 25 12 Z M 25 14 C 18.933594 14 14 18.933594 14 25 C 14 31.066406 18.933594 36 25 36 C 31.066406 36 36 31.066406 36 25 C 36 18.933594 31.066406 14 25 14 Z"></path>
+                                                    </svg>
+
+                                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                        className="fill-current text-white hover:text-[#4f5b62] cursor-pointer"
+                                                        width="50" height="50"
+                                                        viewBox="0 0 50 50">
+                                                        <path d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div className="p-6 ">
+                                            <div className="flex justify-center items-center duration-500 w-full h-72 rounded-lg relative hover:scale-90 cursor-pointer">
+                                                <img className="rounded-lg h-full w-full image-cover" src="/src/assets/img/Proyectos/PlatziTravel.png" />
+                                            </div>
+                                            <div className="flex flex-wrap pt-4 space-x-2">
+                                                <span className="p-4 font-semibold text-white">HTML</span>
+                                                <span className="p-4 font-semibold text-white">Tailwind</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}

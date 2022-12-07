@@ -1,10 +1,11 @@
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        portada: "url('./assets/img/portadamovil.jpg')",
+      },
+    },
   },
   plugins: [],
-}
+};
