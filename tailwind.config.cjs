@@ -5,7 +5,11 @@ module.exports = {
       backgroundImage: {
         portada: "url('./assets/img/portadamovil.jpg')",
       },
+      fontFamily: {
+        Playfair: ["Open Sans", "sans-serif"],
+      },
     },
   },
   plugins: [],
+
 };

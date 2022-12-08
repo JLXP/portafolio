@@ -4,11 +4,11 @@ export const NavBar = () => {
     const [open, setOpen] = useState(false);
 
     let links = [
-        { name: "HOME", link: "/" },
-        { name: "SERVICE", link: "/" },
-        { name: "ABOUT", link: "#faqs" },
-        { name: "BLOG'S", link: "/" },
-        { name: "CONTACT", link: "/" },
+        { name: "Inicio", link: "/" },
+        { name: "Acerca", link: "/" },
+        { name: "Portafolio", link: "#faqs" },
+        { name: "Cursos", link: "/" },
+        { name: "Contacto", link: "/" },
     ];
 
     return (
@@ -26,8 +26,6 @@ export const NavBar = () => {
                                 </linearGradient>
                             </defs>
                         </svg>
-
-
                     </div>
                     <div onClick={() => setOpen(!open)} className="cursor-pointer md:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -38,15 +36,15 @@ export const NavBar = () => {
                         </svg>
                     </div>
                 </div>
-                <ul class={`md:flex md:items-center bg-[#000a12] font-[Poppins] md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-15' : 'top-[-490px]'}`}>
+                <ul class={`md:flex md:items-center bg-[#000a12] md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-15' : 'top-[-490px]'}`}>
                     {links.map(link => (
                         <li key={link.name} className="md:ml-8 text-xl md:my-0 my-7">
-                            <a href={link.link} className="text-white hover:text-gray-400 duration-500">{link.name}</a>
+                            <a href={link.link} className="text-white font-bold hover:text-gray-400 duration-500">{link.name}</a>
                         </li>
                     ))}
-                    <button className="bg-indigo-800 text-white py-2 px-6 rounded md:ml-8 hover:bg-indigo-400 duration-500">
+                    <a className="bg-[#4f5b62] text-white py-2 px-6 rounded md:ml-8 hover:bg-gray-400 duration-500" href="www.google.com" target="_blank">
                         CV
-                    </button>
+                    </a>
                 </ul>
             </div>
         </nav>

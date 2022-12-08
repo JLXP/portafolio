@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 export const Home = () => {
     return (
 
-        <div className="w-full lg:h-3/4 relative" id="home">
+        <div className="w-full h-3/4 md:h-full relative" id="home">
             <div className="w-full h-full">
                 <div className="w-full h-full flex flex-col absolute space-y-96 py-4 items-center lg:space-y-0 top-48 lg:top-0  lg:justify-center lg:items-start">
                     <div className="h-auto lg:w-3/5 lg:flex pb-6">
@@ -23,15 +23,11 @@ export const Home = () => {
                                     />
                                 </p>
                             </div>
-
-
                         </div>
-
-
                     </div>
                 </div>
                 <div className="w-full h-full lg:bg-portada bg-cover lg:bg-center">
-                    <img className="lg:hidden" src="./src/assets/img/portadamovil.jpg" />
+                    <img className="h-full lg:hidden" src="./src/assets/img/portadamovil.jpg" />
                 </div>
             </div>
         </div>
