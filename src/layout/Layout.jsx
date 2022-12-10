@@ -8,13 +8,13 @@ import { Portafolio } from '../components/Portafolio';
 
 export const Layout = () => {
   return (
-    <section class="w-full h-screen" >
+    <div class="w-screen h-screen" >
         <Home/>
         <Acerca/>
         <Portafolio/>
         <Cursos/>
         <Contacto/>
         <Footer/>
-    </section>
+    </div>
   )
 }
