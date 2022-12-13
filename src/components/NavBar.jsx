@@ -4,11 +4,11 @@ export const NavBar = () => {
     const [open, setOpen] = useState(false);
 
     let links = [
-        { name: "Inicio", link: "/" },
-        { name: "Acerca", link: "/" },
-        { name: "Portafolio", link: "#faqs" },
-        { name: "Cursos", link: "/" },
-        { name: "Contacto", link: "/" },
+        { name: "Inicio", link: "#inicio" },
+        { name: "Acerca", link: "#acerca" },
+        { name: "Portafolio", link: "#portafolio" },
+        { name: "Cursos", link: "#cursos" },
+        { name: "Contacto", link: "#contacto" },
     ];
 
     return (

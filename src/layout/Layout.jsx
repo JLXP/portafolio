@@ -8,7 +8,7 @@ import { Portafolio } from '../components/Portafolio';
 
 export const Layout = () => {
   return (
-    <div class="w-screen h-screen" >
+    <div class="h-screen w-full" >
         <Home/>
         <Acerca/>
         <Portafolio/>
