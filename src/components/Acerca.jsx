@@ -7,7 +7,7 @@ export const Acerca = () => {
     <section className="w-full h-full flex justify-center items-center px-6 relative" id="acerca">   
       <div className="w-full flex flex-col md:flex-row  justify-center">
         <div className='hidden lg:w-3/6 lg:flex items-center justify-center'>
-          <img src="./assets/img/acerca.jpg" />
+          <img src="./assets/img/acerca.jpg" loading='lazy' alt="portada"  />
         </div>
         <div className='w-full lg:w-3/6 lg:px-12 flex items-center'>
           <div className="px-6 flex flex-col lg:absolute lg:left-1/3 lg:mr-10 lg:bg-[#000a12]">

@@ -21,7 +21,7 @@ export const Portafolio = () => {
 
     const [openTab, setOpenTab] = React.useState(1);
     return (
-        <section className="w-full  flex flex-col px-6 justify-center items-center" id="portafolio">
+        <section className="w-full h-full flex flex-col px-6 justify-center items-center" id="portafolio">
             <div className='w-full flex flex-col items-center justify-center'>
                 <p className="text-2xl text-white font-semibold">Portafolio</p>
                 <p className="text-4xl text-white font-bold">Ultimos Proyectos</p>
@@ -55,7 +55,7 @@ export const Portafolio = () => {
                             <div className="flex flex-col items-center justify-center w-[320px] md:w-[380px] bg-[#000a12] m-6 rounded-lg">
                                 <div className="pb-4">
                                     <div className="flex justify-center items-center w-full h-72 rounded-lg relative cursor-pointer duration-500">
-                                        <img className="rounded-lg h-full w-full image-cover" src={proyect.src} />
+                                        <img className="rounded-lg h-full w-full image-cover" loading='lazy' src={proyect.src} />
                                     </div>
                                     <div className='flex justify-between p-3'>
                                         <span className="text-2xl text-white font-semibold">{proyect.title}</span>
